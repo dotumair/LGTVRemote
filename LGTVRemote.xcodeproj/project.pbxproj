@@ -6,6 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		18536D4E2E85113E0065CF76 /* Foil in Frameworks */ = {isa = PBXBuildFile; productRef = 18536D4D2E85113E0065CF76 /* Foil */; };
+		18CDEC782E8285AD004B06FF /* Haptica in Frameworks */ = {isa = PBXBuildFile; productRef = 18CDEC772E8285AD004B06FF /* Haptica */; };
+		18CDEC7B2E8285C9004B06FF /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18CDEC7A2E8285C9004B06FF /* IQKeyboardManagerSwift */; };
+		18CDEC7E2E8285E4004B06FF /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 18CDEC7D2E8285E4004B06FF /* ProgressHUD */; };
+		18CDEC812E8285FE004B06FF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 18CDEC802E8285FE004B06FF /* SnapKit */; };
+		18CDEC852E828641004B06FF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 18CDEC842E828641004B06FF /* FirebaseAnalytics */; };
+		18CDEC872E828647004B06FF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 18CDEC862E828647004B06FF /* FirebaseAuth */; };
+		18CDEC892E828651004B06FF /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 18CDEC882E828651004B06FF /* FirebaseCore */; };
+		18CDEC8B2E828651004B06FF /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 18CDEC8A2E828651004B06FF /* FirebaseCrashlytics */; };
+		18CDEC8D2E828651004B06FF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 18CDEC8C2E828651004B06FF /* FirebaseDatabase */; };
+		18CDED492E828815004B06FF /* BottomPopup in Frameworks */ = {isa = PBXBuildFile; productRef = 18CDED482E828815004B06FF /* BottomPopup */; };
+		18CDED4F2E82A08F004B06FF /* WebOSClient in Frameworks */ = {isa = PBXBuildFile; productRef = 18CDED4E2E82A08F004B06FF /* WebOSClient */; };
+		18FB65732E82AAFA00074216 /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = 18FB65722E82AAFA00074216 /* Socket */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		18CDEC5E2E828574004B06FF /* LGTVRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LGTVRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +52,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18CDED492E828815004B06FF /* BottomPopup in Frameworks */,
+				18CDEC7E2E8285E4004B06FF /* ProgressHUD in Frameworks */,
+				18CDEC872E828647004B06FF /* FirebaseAuth in Frameworks */,
+				18FB65732E82AAFA00074216 /* Socket in Frameworks */,
+				18CDEC812E8285FE004B06FF /* SnapKit in Frameworks */,
+				18CDEC782E8285AD004B06FF /* Haptica in Frameworks */,
+				18CDEC892E828651004B06FF /* FirebaseCore in Frameworks */,
+				18CDEC8B2E828651004B06FF /* FirebaseCrashlytics in Frameworks */,
+				18CDEC8D2E828651004B06FF /* FirebaseDatabase in Frameworks */,
+				18CDEC852E828641004B06FF /* FirebaseAnalytics in Frameworks */,
+				18536D4E2E85113E0065CF76 /* Foil in Frameworks */,
+				18CDED4F2E82A08F004B06FF /* WebOSClient in Frameworks */,
+				18CDEC7B2E8285C9004B06FF /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				18CDEC602E828574004B06FF /* LGTVRemote */,
+				18CDEC832E828641004B06FF /* Frameworks */,
 				18CDEC5F2E828574004B06FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +86,13 @@
 				18CDEC5E2E828574004B06FF /* LGTVRemote.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		18CDEC832E828641004B06FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +115,19 @@
 			);
 			name = LGTVRemote;
 			packageProductDependencies = (
+				18CDEC772E8285AD004B06FF /* Haptica */,
+				18CDEC7A2E8285C9004B06FF /* IQKeyboardManagerSwift */,
+				18CDEC7D2E8285E4004B06FF /* ProgressHUD */,
+				18CDEC802E8285FE004B06FF /* SnapKit */,
+				18CDEC842E828641004B06FF /* FirebaseAnalytics */,
+				18CDEC862E828647004B06FF /* FirebaseAuth */,
+				18CDEC882E828651004B06FF /* FirebaseCore */,
+				18CDEC8A2E828651004B06FF /* FirebaseCrashlytics */,
+				18CDEC8C2E828651004B06FF /* FirebaseDatabase */,
+				18CDED482E828815004B06FF /* BottomPopup */,
+				18CDED4E2E82A08F004B06FF /* WebOSClient */,
+				18FB65722E82AAFA00074216 /* Socket */,
+				18536D4D2E85113E0065CF76 /* Foil */,
 			);
 			productName = LGTVRemote;
 			productReference = 18CDEC5E2E828574004B06FF /* LGTVRemote.app */;
@@ -107,6 +157,17 @@
 			);
 			mainGroup = 18CDEC552E828574004B06FF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				18CDEC762E8285AD004B06FF /* XCRemoteSwiftPackageReference "Haptica" */,
+				18CDEC792E8285C9004B06FF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				18CDEC7C2E8285E4004B06FF /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				18CDEC7F2E8285FE004B06FF /* XCRemoteSwiftPackageReference "SnapKit" */,
+				18CDEC822E828636004B06FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				18CDED472E828815004B06FF /* XCRemoteSwiftPackageReference "BottomPopup" */,
+				18CDED4D2E82A08F004B06FF /* XCRemoteSwiftPackageReference "WebOSClient" */,
+				18FB65712E82AAFA00074216 /* XCRemoteSwiftPackageReference "BlueSocket" */,
+				18536D4C2E85113E0065CF76 /* XCRemoteSwiftPackageReference "Foil" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 18CDEC5F2E828574004B06FF /* Products */;
 			projectDirPath = "";
@@ -144,15 +205,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 6P5R2DH69R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LGTVRemote/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -160,6 +222,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.LGTVRemote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -172,15 +238,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = 6P5R2DH69R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LGTVRemote/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -188,6 +255,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.LGTVRemote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -337,6 +408,149 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18536D4C2E85113E0065CF76 /* XCRemoteSwiftPackageReference "Foil" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jessesquires/Foil.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		18CDEC762E8285AD004B06FF /* XCRemoteSwiftPackageReference "Haptica" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/efremidze/Haptica.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		18CDEC792E8285C9004B06FF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.1;
+			};
+		};
+		18CDEC7C2E8285E4004B06FF /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.3;
+			};
+		};
+		18CDEC7F2E8285FE004B06FF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		18CDEC822E828636004B06FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+		18CDED472E828815004B06FF /* XCRemoteSwiftPackageReference "BottomPopup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ergunemr/BottomPopup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+		18CDED4D2E82A08F004B06FF /* XCRemoteSwiftPackageReference "WebOSClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jareksedy/WebOSClient.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
+		18FB65712E82AAFA00074216 /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/BlueSocket.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18536D4D2E85113E0065CF76 /* Foil */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18536D4C2E85113E0065CF76 /* XCRemoteSwiftPackageReference "Foil" */;
+			productName = Foil;
+		};
+		18CDEC772E8285AD004B06FF /* Haptica */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CDEC762E8285AD004B06FF /* XCRemoteSwiftPackageReference "Haptica" */;
+			productName = Haptica;
+		};
+		18CDEC7A2E8285C9004B06FF /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CDEC792E8285C9004B06FF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		18CDEC7D2E8285E4004B06FF /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CDEC7C2E8285E4004B06FF /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
+		};
+		18CDEC802E8285FE004B06FF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CDEC7F2E8285FE004B06FF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		18CDEC842E828641004B06FF /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CDEC822E828636004B06FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		18CDEC862E828647004B06FF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CDEC822E828636004B06FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		18CDEC882E828651004B06FF /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CDEC822E828636004B06FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		18CDEC8A2E828651004B06FF /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CDEC822E828636004B06FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		18CDEC8C2E828651004B06FF /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CDEC822E828636004B06FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		18CDED482E828815004B06FF /* BottomPopup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CDED472E828815004B06FF /* XCRemoteSwiftPackageReference "BottomPopup" */;
+			productName = BottomPopup;
+		};
+		18CDED4E2E82A08F004B06FF /* WebOSClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18CDED4D2E82A08F004B06FF /* XCRemoteSwiftPackageReference "WebOSClient" */;
+			productName = WebOSClient;
+		};
+		18FB65722E82AAFA00074216 /* Socket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18FB65712E82AAFA00074216 /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = Socket;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18CDEC562E828574004B06FF /* Project object */;
 }

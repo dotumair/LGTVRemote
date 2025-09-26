@@ -1,11 +1,9 @@
-//
-//  AppDelegate.swift
-//  LGTVRemote
-//
-//  Created by umair on 23/09/2025.
-//
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import IQKeyboardManagerSwift
+import IQKeyboardToolbarManager
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +12,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
+        Auth.auth().signInAnonymously { _, _ in
+            CLConfigService.shared.fetchConfigs()
+        }
+        
+        IQKeyboardManager.shared.isEnabled = true
+        IQKeyboardToolbarManager.shared.isEnabled = true
+        
+        InAppService.shared.load()
+
         return true
     }
 

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ksy-yO-UGQ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,98 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SamsungTVRemote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remoteMockupBg" translatesAutoresizingMaskIntoConstraints="NO" id="Mu1-Ad-LN5">
+                                <rect key="frame" x="50" y="255.66666666666669" width="293" height="596.33333333333326"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.047058823529411764" green="0.066666666666666666" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mu1-Ad-LN5" secondAttribute="trailing" constant="50" id="Xjd-gp-7ip"/>
+                            <constraint firstItem="Mu1-Ad-LN5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="XmP-4f-gu9"/>
+                            <constraint firstAttribute="bottom" secondItem="Mu1-Ad-LN5" secondAttribute="bottom" id="ebW-Je-Ler"/>
+                            <constraint firstItem="Mu1-Ad-LN5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="fPh-W1-V0Q"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wVL-wT-4r7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="959.5419847328244" y="3.5211267605633805"/>
+        </scene>
+        <!--Main Tab BarVC-->
+        <scene sceneID="Oi8-qW-eAZ">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarVC" id="CFm-TL-QiT" customClass="MainTabBarVC" customModule="SamsungTVRemote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jhJ-gH-szR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ICj-mr-A8x" kind="relationship" relationship="viewControllers" id="1C9-1S-lBo"/>
+                        <segue destination="N4f-iO-AZk" kind="relationship" relationship="viewControllers" id="713-IE-eO7"/>
+                        <segue destination="hwe-nl-Wsf" kind="relationship" relationship="viewControllers" id="3SA-fa-cHu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7az-Zo-cGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2059" y="2"/>
+        </scene>
+        <!--RemoteVC-->
+        <scene sceneID="bRM-AP-1fv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Remote" referencedIdentifier="RemoteVC" id="ICj-mr-A8x" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="uhj-Uq-6ya"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLR-a9-4FA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2808" y="-54"/>
+        </scene>
+        <!--AppsVC-->
+        <scene sceneID="10b-tq-QCN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Remote" referencedIdentifier="AppsVC" id="N4f-iO-AZk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="dbi-o6-gdf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9vV-h6-Cvc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2797" y="1"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="hf7-bs-7Tn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsVC" id="hwe-nl-Wsf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ws3-Dh-wV8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HaE-MS-xqc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2812" y="58"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lrc-So-29N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ksy-yO-UGQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ykr-Rr-MeW">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6xr-sQ-GlP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kbc-P4-e95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="remoteMockupBg" width="289" height="614"/>
+    </resources>
 </document>
