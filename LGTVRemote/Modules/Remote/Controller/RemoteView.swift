@@ -39,7 +39,7 @@ struct RemoteView: View {
             Color.init(uiColor: UIColor(hex: "010101")).ignoresSafeArea()
             
             ScrollView(showsIndicators: false) {
-                VStack(spacing: 25) {
+                VStack(spacing: 25.dp) {
 //                    TopBarView(onPower: actions.onPower, onConnectDevice: actions.onConnectDevice)
                     StandardControlsView(actions: actions)
                     ChannelAndVolumeView(
@@ -59,15 +59,15 @@ struct RemoteView: View {
                         )
                     } else {
                         TouchpadViewRepresentable()
-                            .frame(height: 200)
+                            .frame(height: 200.dp)
                     }
                     
                     DeviceSelectionView { index in
                         selectedTab = index
                     }
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 20.dp)
                 }
-                .padding(.horizontal, 25)
+                .padding(.horizontal, 25.dp)
             }
         }
         .foregroundColor(.white)
@@ -109,7 +109,7 @@ private struct StandardControlsView: View {
     private let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 3)
 
     var body: some View {
-        LazyVGrid(columns: columns, spacing: 20) {
+        LazyVGrid(columns: columns, spacing: 20.dp) {
             RemoteCircleButton(icon: "arrow.uturn.backward") {
                 actions.onViewAction(.tvCommand(.back))
             }
@@ -134,7 +134,7 @@ private struct StandardControlsView: View {
                 actions.onViewAction(.tvCommand(.fastForward))
             }
         }
-        .padding(.horizontal, 20)
+        .padding(.horizontal, 20.dp)
     }
 }
 
@@ -146,13 +146,13 @@ private struct ChannelAndVolumeView: View {
     let onVolumeUp: () -> Void
     
     var body: some View {
-        HStack(spacing: 20) {
+        HStack(spacing: 20.dp) {
             HStack {
                 Button(action: onChannelDown) {
                     Image(systemName: "chevron.down")
                         .font(.system(size: 18.dp, weight: .bold))
                         .frame(maxWidth: .infinity)
-                        .frame(height: 30)
+                        .frame(height: 30.dp)
                         .contentShape(Rectangle())
                 }
                 Text("CH").font(Font.appFont(ofSize: 16.dp, weight: .medium))
@@ -160,7 +160,7 @@ private struct ChannelAndVolumeView: View {
                     Image(systemName: "chevron.up")
                         .font(.system(size: 18.dp, weight: .bold))
                         .frame(maxWidth: .infinity)
-                        .frame(height: 30)
+                        .frame(height: 30.dp)
                         .contentShape(Rectangle())
                 }
             }
@@ -171,7 +171,7 @@ private struct ChannelAndVolumeView: View {
                     Image(systemName: "minus")
                         .font(.system(size: 18.dp, weight: .bold))
                         .frame(maxWidth: .infinity)
-                        .frame(height: 30)
+                        .frame(height: 30.dp)
                         .contentShape(Rectangle())
                 }
                 Text("vol").fontWeight(.bold)
@@ -179,7 +179,7 @@ private struct ChannelAndVolumeView: View {
                     Image(systemName: "plus")
                         .font(.system(size: 18.dp, weight: .bold))
                         .frame(maxWidth: .infinity)
-                        .frame(height: 30)
+                        .frame(height: 30.dp)
                         .contentShape(Rectangle())
                 }
             }
@@ -196,8 +196,8 @@ private struct DirectionalPadView: View {
     let onLeft: () -> Void
     let onRight: () -> Void
     
-    private let viewSize: CGFloat = 250.0
-    private let arrowOffset: CGFloat = 100
+    private let viewSize: CGFloat = 250.dp
+    private let arrowOffset: CGFloat = 100.dp
 
     var body: some View {
         ZStack {
@@ -219,7 +219,7 @@ private struct DirectionalPadView: View {
 
             Button(action: onOK) {
                 Text("OK")
-                    .font(.title2).fontWeight(.bold)
+                    .font(.appFont(ofSize: 22.dp, weight: .bold))
                     .frame(width: (viewSize * 0.45), height: (viewSize * 0.45))
                     .background(LinearGradient(
                         colors: [Color.init(uiColor: UIColor(hex: "FFDAC4", alpha: 0.9)),
@@ -251,7 +251,7 @@ private struct ArrowButton: View {
             Image(systemName: icon)
                 .font(.appFont(ofSize: 25.dp, weight: .bold))
                 .foregroundColor(.white)
-                .frame(width: 60, height: 60)
+                .frame(width: 60.dp, height: 60.dp)
         }
         .background(Color.clear)
         .offset(offset)
@@ -289,11 +289,11 @@ private struct DeviceSelectionView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
-        .frame(width: 180, height: 50)
+        .frame(width: 180.dp, height: 50.dp)
         .background(LinearGradient(colors: [.init(uiColor: UIColor(hex: "#181818")), .init(uiColor: UIColor(hex: "#262626"))], startPoint: .topLeading, endPoint: .bottomTrailing))
         .overlay(
             // The gradient border
-            RoundedRectangle(cornerRadius: 25)
+            RoundedRectangle(cornerRadius: 25.dp)
                 .stroke(
                     LinearGradient(
                         colors: [.white, .clear, .clear, .white],
@@ -324,11 +324,11 @@ private struct RemoteCircleButton: View {
                     Text(text).font(.appFont(ofSize: 14.dp, weight: .regular))
                 }
             }
-            .frame(width: 60, height: 60)
+            .frame(width: 60.dp, height: 60.dp)
             .background(LinearGradient(colors: [.init(uiColor: UIColor(hex: "#181818")), .init(uiColor: UIColor(hex: "#262626"))], startPoint: .topLeading, endPoint: .bottomTrailing))
             .overlay(
                 // The gradient border
-                RoundedRectangle(cornerRadius: 30)
+                RoundedRectangle(cornerRadius: 30.dp)
                     .stroke(
                         LinearGradient(
                             colors: [.white, .clear, .clear, .white],
@@ -345,16 +345,17 @@ private struct RemoteCircleButton: View {
 
 private struct DialPadButton: View {
     let action: () -> Void
+    private let dimen: CGFloat = 8.dp
 
     var body: some View {
         Button(action: action) {
             HStack(spacing: 3) {
-                Circle().fill(Color.blue).frame(width: 8, height: 8)
-                Circle().fill(Color.red).frame(width: 8, height: 8)
-                Circle().fill(Color.yellow).frame(width: 8, height: 8)
-                Circle().fill(Color.green).frame(width: 8, height: 8)
+                Circle().fill(Color.blue).frame(width: dimen, height: dimen)
+                Circle().fill(Color.red).frame(width: dimen, height: dimen)
+                Circle().fill(Color.yellow).frame(width: dimen, height: dimen)
+                Circle().fill(Color.green).frame(width: dimen, height: dimen)
             }
-            .frame(width: 60, height: 60)
+            .frame(width: 60.dp, height: 60.dp)
             .background(Color.white.opacity(0.15))
             .clipShape(Circle())
         }
@@ -365,11 +366,11 @@ private struct ChannelVolumeModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-            .frame(maxWidth: .infinity, minHeight: 60)
+            .frame(maxWidth: .infinity, minHeight: 60.dp)
             .background(LinearGradient(colors: [.init(uiColor: UIColor(hex: "#181818")), .init(uiColor: UIColor(hex: "#262626"))], startPoint: .topLeading, endPoint: .bottomTrailing))
             .overlay(
                 // The gradient border
-                RoundedRectangle(cornerRadius: 30)
+                RoundedRectangle(cornerRadius: 30.dp)
                     .stroke(
                         LinearGradient(
                             colors: [.white, .white.opacity(0.1), .clear, .clear, .clear, .clear, .white.opacity(0.1), .white],

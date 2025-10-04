@@ -30,7 +30,7 @@ class MainTabBarVC: UITabBarController {
         
         DispatchQueue.main.async {
 //            self.presentInAppScreen()
-            let vc = GuideConnectVC()
+            let vc = SelectRemoteVC()
             if let topViewController = UIApplication.topViewController() {
 //                topViewController.present(vc, animated: true)
             }

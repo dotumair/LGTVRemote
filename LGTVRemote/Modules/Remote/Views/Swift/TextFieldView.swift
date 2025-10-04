@@ -48,9 +48,6 @@ class TextFieldView: UIView {
         super.layoutSubviews()
         
         layer.cornerRadius = cornerRadius
-        
-        layer.sublayers?.filter({$0.name == "CAShapeLayer"}).forEach({$0.removeFromSuperlayer()})
-        addInnerShadow(to: self, color: UIColor.black.withAlphaComponent(0.9), opacity: 1.0, cornerRadius: cornerRadius)
     }
     
     // MARK: - Private Setup Methods
@@ -81,41 +78,5 @@ class TextFieldView: UIView {
 
         // Ensure trimmed string is not empty
         return !trimmed.isEmpty
-    }
-    
-    private func addInnerShadow(to view: UIView,
-                                color: UIColor = .black,
-                                offset: CGSize = .zero,
-                                radius: CGFloat = 5.0,
-                                opacity: Float = 0.5,
-                                cornerRadius: CGFloat = 0) {
-        
-        let shadowLayer = CAShapeLayer()
-        shadowLayer.name = "CAShapeLayer"
-        shadowLayer.frame = view.bounds
-        
-        // Create a larger path that surrounds the view
-        let inset: CGFloat = -radius * 2
-        let outerPath = UIBezierPath(roundedRect: view.bounds.insetBy(dx: inset, dy: inset), cornerRadius: cornerRadius)
-        
-        // Create a smaller path the size of the view (inner cutout)
-        let innerPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: cornerRadius)
-        
-        // Append the inner path to the outer (reversed so it creates a "hole")
-        outerPath.append(innerPath)
-        outerPath.usesEvenOddFillRule = true
-        
-        shadowLayer.path = outerPath.cgPath
-        shadowLayer.fillRule = .evenOdd
-        shadowLayer.fillColor = color.cgColor
-        shadowLayer.opacity = opacity
-        
-        // Add blur using shadow properties
-        shadowLayer.shadowColor = color.cgColor
-        shadowLayer.shadowOffset = offset
-        shadowLayer.shadowRadius = radius
-        shadowLayer.shadowOpacity = 1.0
-        
-        view.layer.addSublayer(shadowLayer)
     }
 }

@@ -74,7 +74,7 @@ final class RemoteViewController: UIViewController {
 
         // 4. Set up constraints for the hosting controller's view.
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
-        hostingController.view.addConstraints(top: .equalToWithOffset(view.safeAreaLayoutGuide.snp.top, 70), left: .equalToSuperView(0), right: .equalToSuperView(0), bottom: .equalToWithOffset(view.safeAreaLayoutGuide.snp.bottom, 0))
+        hostingController.view.addConstraints(top: .equalToWithOffset(view.safeAreaLayoutGuide.snp.top, 70.dp), left: .equalToSuperView(0), right: .equalToSuperView(0), bottom: .equalToWithOffset(view.safeAreaLayoutGuide.snp.bottom, 0))
     }
 
     // MARK: - Action Handlers

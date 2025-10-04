@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     }
     
     private func gotoMain() {
+        #if DEBUG
+//        UserDefaults.standard.removeObject(forKey: "firstLaunch")
+        #endif
         let firstLaunch = UserDefaults.standard.value(forKey: "firstLaunch") as? Int ?? 0
         if firstLaunch == 0 {
             UserDefaults.standard.set(1, forKey: "firstLaunch")
