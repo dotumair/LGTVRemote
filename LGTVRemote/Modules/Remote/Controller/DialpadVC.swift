@@ -1,6 +1,7 @@
 
 import UIKit
 import BottomPopup
+import WebOSClient
 
 class DialpadVC: BottomPopupViewController {
     
@@ -100,21 +101,21 @@ class DialpadVC: BottomPopupViewController {
     
     @objc func numberButtonTapped(_ sender: UIButton) {
         if (0...9).contains(sender.tag) {
-//            let keys: [TVRemoteCommand.Params.ControlKey] = [
-//                .number0, .number1, .number2, .number3, .number4,
-//                .number5, .number6, .number7, .number8, .number9
-//            ]
-//            TVHelper.shared.sendCommand(keys[sender.tag])
+            let keys: [WebOSKeyTarget] = [
+                .num0, .num1, .num2, .num3, .num4,
+                .num5, .num6, .num7, .num8, .num9
+            ]
+            TVHelper.shared.sendCommand(keys[sender.tag])
         }
     }
     
     @objc func colorButtonTapped(_ sender: UIButton) {
-//        let colors: [TVRemoteCommand.Params.ControlKey] = [
-//            .colorRed, .colorGreen, .colorYellow, .colorBlue
-//        ]
-//
-//        if (0..<colors.count).contains(sender.tag) {
-//            TVHelper.shared.sendCommand(colors[sender.tag])
-//        }
+        let colors: [WebOSKeyTarget] = [
+            .red, .green, .yellow, .blue,
+        ]
+
+        if (0..<colors.count).contains(sender.tag) {
+            TVHelper.shared.sendCommand(colors[sender.tag])
+        }
     }
 }

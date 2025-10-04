@@ -1,5 +1,21 @@
 
 import UIKit
+import SwiftUI
+
+struct TouchpadViewRepresentable: UIViewRepresentable {
+    
+    func makeUIView(context: Context) -> TouchpadView {
+        let view = TouchpadView()
+//        view.translatesAutoresizingMaskIntoConstraints = false
+        view.cornerRadius = 20.dp
+        view.clipsToBounds = true
+        return view
+    }
+    
+    func updateUIView(_ uiView: TouchpadView, context: Context) {
+        
+    }
+}
 
 class TouchpadView: UIView {
     
@@ -45,8 +61,8 @@ class TouchpadView: UIView {
         
         layer.cornerRadius = cornerRadius
         
-        layer.sublayers?.filter({$0.name == "CAShapeLayer"}).forEach({$0.removeFromSuperlayer()})
-        addInnerShadow(to: self, color: UIColor.black.withAlphaComponent(0.9), opacity: 1.0, cornerRadius: cornerRadius)
+//        layer.sublayers?.filter({$0.name == "CAShapeLayer"}).forEach({$0.removeFromSuperlayer()})
+//        addInnerShadow(to: self, color: UIColor.black.withAlphaComponent(0.9), opacity: 1.0, cornerRadius: cornerRadius)
     }
     
     // MARK: - Private Setup Methods
@@ -54,7 +70,7 @@ class TouchpadView: UIView {
     /// Sets up the initial view hierarchy and layers.
     private func setupView() {
         // The main background of the view is clear, as the shape layers will provide the color.
-        backgroundColor = UIColor(hex: "131313")
+        backgroundColor = UIColor(hex: "212121")
         
         setupUnlockContentView()
         if InAppService.shared.isProUser {

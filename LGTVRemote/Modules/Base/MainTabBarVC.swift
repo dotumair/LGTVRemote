@@ -10,7 +10,6 @@ class MainTabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBar.backgroundColor = UIColor(hex: "141313")
         self.tabBar.tintColor = UIColor.foreground
         self.tabBar.barTintColor = UIColor.foreground
         
@@ -36,6 +35,26 @@ class MainTabBarVC: UITabBarController {
 //                topViewController.present(vc, animated: true)
             }
 //            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        setupTabbar()
+    }
+    
+    private func setupTabbar() {
+        guard let controllers = self.viewControllers else { return }
+        controllers[0].tabBarItem.image = UIImage(named: "ic_remote_tab")?.withRenderingMode(.alwaysOriginal)
+        controllers[0].tabBarItem.selectedImage = UIImage(named: "ic_remote_tab_sl")?.withRenderingMode(.alwaysOriginal)
+        controllers[1].tabBarItem.image = UIImage(named: "ic_apps_tab")?.withRenderingMode(.alwaysOriginal)
+        controllers[1].tabBarItem.selectedImage = UIImage(named: "ic_apps_tab_sl")?.withRenderingMode(.alwaysOriginal)
+        controllers[2].tabBarItem.image = UIImage(named: "ic_setting_tab")?.withRenderingMode(.alwaysOriginal)
+        controllers[2].tabBarItem.selectedImage = UIImage(named: "ic_setting_tab_sl")?.withRenderingMode(.alwaysOriginal)
+
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(hex: "181818")
+
+        UITabBar.appearance().standardAppearance = appearance
+        if #available(iOS 15.0, *) {
+            UITabBar.appearance().scrollEdgeAppearance = appearance
         }
     }
 }

@@ -12,14 +12,14 @@
         <!--Remote-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="RemoteVC" id="Y6W-OH-hqX" customClass="RemoteVC" customModule="SamsungTVRemote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RemoteViewController" id="Y6W-OH-hqX" customClass="RemoteViewController" customModule="LGTVRemote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="background"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Remote" image="ic_remote_tab" id="sKa-aJ-KWn"/>
+                    <tabBarItem key="tabBarItem" title="Remote" image="icon2" selectedImage="icon2" id="sKa-aJ-KWn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -29,7 +29,7 @@
         <!--Apps-->
         <scene sceneID="fGS-Ls-jG4">
             <objects>
-                <viewController storyboardIdentifier="AppsVC" id="n7u-KS-Rbl" customClass="AppsVC" customModule="SamsungTVRemote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppsVC" id="n7u-KS-Rbl" customClass="AppsVC" customModule="LGTVRemote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="82R-4X-bKQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,8 +45,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_apps_tab" width="20" height="20"/>
-        <image name="ic_remote_tab" width="20" height="20"/>
+        <image name="ic_apps_tab" width="25" height="25"/>
+        <image name="icon2" width="30" height="30"/>
         <namedColor name="background">
             <color red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

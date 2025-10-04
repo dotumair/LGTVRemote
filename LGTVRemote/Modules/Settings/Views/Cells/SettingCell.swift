@@ -59,7 +59,7 @@ class SettingCell: UICollectionViewCell {
         
         //divider
         let div = UIView()
-        div.backgroundColor = UIColor(hex: "131313")
+        div.backgroundColor = UIColor(hex: "212121")
         contentView.addSubview(div)
         div.addConstraints(left: .equalToSuperView(0), right: .equalToSuperView(0), bottom: .equalToSuperView(0), height: .equalTo(1))
     }

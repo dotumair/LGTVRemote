@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SamsungTVRemote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LGTVRemote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
         <!--Main Tab BarVC-->
         <scene sceneID="Oi8-qW-eAZ">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarVC" id="CFm-TL-QiT" customClass="MainTabBarVC" customModule="SamsungTVRemote" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarVC" id="CFm-TL-QiT" customClass="MainTabBarVC" customModule="LGTVRemote" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jhJ-gH-szR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="2059" y="2"/>
         </scene>
-        <!--RemoteVC-->
+        <!--RemoteViewController-->
         <scene sceneID="bRM-AP-1fv">
             <objects>
-                <viewControllerPlaceholder storyboardName="Remote" referencedIdentifier="RemoteVC" id="ICj-mr-A8x" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Remote" referencedIdentifier="RemoteViewController" id="ICj-mr-A8x" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="uhj-Uq-6ya"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLR-a9-4FA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

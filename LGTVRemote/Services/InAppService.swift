@@ -101,7 +101,7 @@ class InAppService {
 
     var isProUser: Bool {
         #if DEBUG
-        return true
+        return false
         #endif
         return UserDefaults.standard.bool(forKey: proIdentifier)
     }
